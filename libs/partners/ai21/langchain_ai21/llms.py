@@ -19,8 +19,9 @@ from langchain_ai21.ai21_base import AI21Base
 
 
 class AI21LLM(BaseLLM, AI21Base):
-    """AI21 large language models. Different model types support different parameters and different parameter values.
-    Please read the [AI21 reference documentation](https://docs.ai21.com/reference) for your model
+    """AI21 large language models. Different model types support different parameters
+    and different parameter values. Please read the
+    [AI21 reference documentation](https://docs.ai21.com/reference) for your model
     to understand which parameters are available.
 
 
@@ -34,7 +35,7 @@ class AI21LLM(BaseLLM, AI21Base):
 
     model: str
     """Model type you wish to interact with. 
-    You can view the options at https://github.com/AI21Labs/ai21-python?tab=readme-ov-file#model-types"""
+    You can view the options at https://github.com/AI21Labs/ai21-python#model-types"""
 
     num_results: int = 1
     """The number of responses to generate for a given prompt."""
@@ -43,7 +44,8 @@ class AI21LLM(BaseLLM, AI21Base):
     """The maximum number of tokens to generate for each response."""
 
     min_tokens: int = 0
-    """The minimum number of tokens to generate for each response. _Not supported for all models._"""
+    """The minimum number of tokens to generate for each response.
+    _Not supported for all models._"""
 
     temperature: float = 0.7
     """A value controlling the "creativity" of the model's responses."""
@@ -52,13 +54,16 @@ class AI21LLM(BaseLLM, AI21Base):
     """A value controlling the diversity of the model's responses."""
 
     top_k_return: int = 0
-    """The number of top-scoring tokens to consider for each generation step. _Not supported for all models._"""
+    """The number of top-scoring tokens to consider for each generation step.
+    _Not supported for all models._"""
 
     frequency_penalty: Optional[Any] = None
-    """A penalty applied to tokens that are frequently generated. _Not supported for all models._"""
+    """A penalty applied to tokens that are frequently generated.
+    _Not supported for all models._"""
 
     presence_penalty: Optional[Any] = None
-    """ A penalty applied to tokens that are already present in the prompt. _Not supported for all models._"""
+    """ A penalty applied to tokens that are already present in the prompt.
+    _Not supported for all models._"""
 
     count_penalty: Optional[Any] = None
     """A penalty applied to tokens based on their frequency 
